@@ -1,0 +1,176 @@
+/* O asterisco () é um seletor universal no CSS, e ele tem a função de selecionar todos os elementos dentro de um documento HTML. Isso significa que o seletor "" irá aplicar estilos a todos os elementos da página, a menos que sejam especificamente anulados por outros seletores mais específicos.*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* O ROOT SERVE PARA ADICIONAR NOSSAS TRANSIÇÕES, NO RROT É CRIADO NOSSOS ATRALHOS COMO POR EXEMPLO --FOTO-FUNTO: URL (FOTO)
+ESSES ATALHOS VÃO SUBSTITUIR NOSSA COR PADRÃO ABAIXO, E NA TAG CRIADA PELO CLASS, NO NOSSO CASO VARIAÇÃO, SERÁ NECESSÁRIO COLOCAR O .VARIAÇÃO ABAIXO DO ROOT E ADICIONAR LÁ NOSSA VARIAÇÃO, SEJA DE COR OU FOTO, QUANDO A VARIAÇÃO ESTIVER ATIVA, MUDARÁ PARA A OPÇÃO ESCOLHIDA*/
+
+
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobiledarck.jpg);
+  --li-br: rgba(255, 255, 255, 0.5);
+  --fund-ul: rgba(255, 255, 255, 0.1);
+  --back-icon: rgba(255, 255, 255, 0.2);
+  --back-ul: rgba(255, 255, 255, 0.5);
+  --icon-luasol: url(./assets/lua.svg);
+}
+
+.variação {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobilelight.jpg);
+  --li-br: rgba(0, 0, 0, 0.5);
+  --fund-ul: rgba(0, 0, 0, 0.05);
+  --back-icon: rgba(0, 0, 0, 0.1);
+  --back-ul: rgba(0, 0, 0, 0.02);
+  --icon-luasol: url(./assets/sol.svg);
+}
+
+body {
+  /*
+
+O BODY SERÁ SEMPRE A TELA INICIAL DO PROJETO, ONDE GERALMENTE ENTRA O BACKGROUND
+
+  esse espaço não entra no código é uma exemplo de como adioconar comentários ao seu projeto
+  background-image: url(./assets/bg-mobiledarck.jpg);
+  background-repeat: no-repeat;  
+  background-position: top center ;
+  background-size: cover;
+  */
+
+  /*background: color image repeat position/size */
+  background: var(--bg-url) no-repeat top center/cover;
+}
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+/* meu quadrado e os elementos dentro dele */
+#quadrado {
+  width: 320px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 600;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+#lua {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#lua button {
+  background: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-image: var(--icon-luasol);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.variação #lua button {
+  right: 0;
+  left: initial;
+}
+#lua span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  border-radius: 9999px;
+  background: var(--fund-ul);
+  border: 1px solid var(--li-br);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* lista */
+
+ul {
+  list-style: none;
+  flex-direction: column;
+  display: flex;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+ul li a {
+  /* o que cada item faz? 
+   display: flex; faz com o que a frase ocupe todo os espaço do quadrado
+  justify-content: center; este comando só funciona quando o display flez estiver ativo e ser para centralizar os itens no meio da caixa
+  align-items: center; não fez diferença na formula 
+  padding: 16px 24px; aumentou o espaçamento dos itens
+  gap: 8px; aumentou espaço entre os quadrados */
+
+  display: flex;
+  justify-content: center;
+  padding: 16px 24px;
+  text-decoration: none;
+
+  background: var(--fund-ul);
+  border: 1px solid var(--li-br);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0, 2ms;
+}
+
+/* formas de adiconar animações de transição em nossa (ul li a)ul li a:hover{
+
+  background: rgba(255, 255, 255, 0.5);
+  border: 1.5px solid white; a borda vai aumentar um pouco de tamanho e vai ficar branca ao passar o mouse por cima
+   chamada de pseudo-selector*/
+
+ul li a:hover {
+  background: var(--back-ul);
+  border: 1.5px solid var(--text-color);
+}
+
+#icones {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  padding: 24px 0;
+}
+
+#icones a {
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 16px;
+  background: 0.2s;
+}
+
+#icones a:hover {
+  background: var(--fund-ul);
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
