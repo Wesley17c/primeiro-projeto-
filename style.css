@@ -44,7 +44,6 @@ O BODY SERÁ SEMPRE A TELA INICIAL DO PROJETO, ONDE GERALMENTE ENTRA O BACKGROUN
   /*background: color image repeat position/size */
   background: var(--bg-url) no-repeat top center/cover;
   height: 100vh;
-
 }
 body * {
   font-family: "Inter", sans-serif;
@@ -93,16 +92,15 @@ body * {
   position: absolute;
   top: 50%;
   left: 0;
-  animation: slide-back 0.2s
+  animation: slide-back 0.2s;
 }
 
 .variação #lua button {
- animation: slide-in 0.2s forwards;
+  animation: slide-in 0.2s forwards;
 }
 
 #lua button:hover {
   outline: 8px solid var(--back-icon);
-
 }
 
 #lua span {
@@ -194,11 +192,18 @@ footer {
 }
 
 @keyframes slide-in {
-  from {left: 0;}
-to {left: 50%;}
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
 }
 @keyframes slide-back {
-
-from {left: 50%;}
-to {left: 0;}
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
