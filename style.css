@@ -51,9 +51,10 @@ body * {
 }
 /* meu quadrado e os elementos dentro dele */
 #quadrado {
-  width: 320px;
+  width: 100%;
   margin: 56px auto 0px;
   padding: 0 24px;
+  max-width: 588px;
 }
 
 #profile {
