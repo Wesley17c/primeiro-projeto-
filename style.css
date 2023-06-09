@@ -43,6 +43,8 @@ O BODY SERÁ SEMPRE A TELA INICIAL DO PROJETO, ONDE GERALMENTE ENTRA O BACKGROUN
 
   /*background: color image repeat position/size */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
+  
 }
 body * {
   font-family: "Inter", sans-serif;
