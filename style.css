@@ -54,7 +54,7 @@ body * {
   width: 100%;
   margin: 56px auto 0px;
   padding: 0 24px;
-  max-width: 589px;
+  max-width: 570px;
 }
 
 #profile {
@@ -140,7 +140,7 @@ ul li a {
   background: var(--fund-ul);
   border: 1px solid var(--li-br);
   backdrop-filter: blur(4px);
-  border-radius: 8px;
+  border-radius: 12px;
   font-weight: 500;
   transition: background 0, 2ms;
 }
