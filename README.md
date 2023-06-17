@@ -17,9 +17,6 @@ Projeto gratuito, promovido pela Rocketseat para ensino de tecnologias WEB.
 
 <br>
 
-<p align="center">
-  <img alt="calendario da copa" src=".github/preview.jpg" width="100%">
-</p>
 
 ## 🚀 Tecnologias
 
